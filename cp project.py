@@ -15,13 +15,7 @@ class Database:
         if not os.path.exists(file_path):
             return []  # Return an empty list if the file doesn't exist yet
         try:
-            with open(file_path, 'r') as f:
-                return json.load(f)
-        except json.JSONDecodeError:
-            print(f"Warning: Could not decode JSON from {self.filename}. Starting with an empty schedule.")
-            return []
-        except Exception as e:
-            print(f"Error loading schedule: {e}")
+             {e}")
             return []
 
     def _save_schedule(self):
